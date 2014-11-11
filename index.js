@@ -1,18 +1,21 @@
-module.exports.ifAnyOne = function () {
-  var arg = arguments,
-    argLength = arg.length,
-    content = arguments[argLength - 1],
-    i = 0,
-    status = false;
+module.exports.register = function (Handlebars, options, param) {
 
-  while (i < argLength) {
-    if (arguments[i]) {
-      status = true;
-      break;
+  Handlebars.registerHelper('ifAnyOne', function () {
+    var arg = arguments,
+      argLength = arg.length,
+      content = arguments[argLength - 1],
+      i = 0,
+      status = false;
+
+    while (i < argLength) {
+      if (arguments[i]) {
+        status = true;
+        break;
+      }
+
+      i++;
     }
 
-    i++;
-  }
-
-  return status ? content.fn(this) : content.inverse(this);
+    return status ? content.fn(this) : content.inverse(this);
+  });
 };
