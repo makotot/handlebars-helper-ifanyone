@@ -7,8 +7,8 @@ module.exports.register = function (Handlebars, options, param) {
    */
   Handlebars.registerHelper('ifAnyOne', function () {
     var arg = arguments,
-      argLength = arg.length,
-      content = arguments[argLength - 1],
+      argLength = arg.length - 1,
+      content = arguments[argLength],
       i = 0,
       status = false;
 
