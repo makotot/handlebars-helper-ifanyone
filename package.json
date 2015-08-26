@@ -1,12 +1,12 @@
 {
   "name": "handlebars-helper-ifanyone",
   "version": "0.0.1",
-  "description": "",
+  "description": "Similar to {{#ifAny}}, accepts multiple arguments but determine if any one of arguments return true.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "makotot",
   "license": "MIT",
   "devDependencies": {
     "handlebars": "^2.0.0"
